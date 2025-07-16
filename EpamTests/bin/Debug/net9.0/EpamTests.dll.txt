@@ -1,0 +1,5 @@
+EpamTests.Tests.GlobalSearchTests.ValidateSearchResults("BLOCKCHAIN")
+EpamTests.Tests.GlobalSearchTests.ValidateSearchResults("Cloud")
+EpamTests.Tests.GlobalSearchTests.ValidateSearchResults("Automation")
+EpamTests.Tests.JobSearchTests.ValidateJobSearch("Java")
+EpamTests.Tests.JobSearchTests.ValidateJobSearch(".NET")

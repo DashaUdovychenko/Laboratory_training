@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\dariy\\OneDrive\\Рабочий стол\\Selenium\\Laboratory_training\\EpamTests\\EpamTests.csproj": {}
+    "C:\\Users\\dariy\\OneDrive\\Рабочий стол\\Selenium\\Laboratory_training\\EpamTests\\EpamTests.csproj": {}
   },
   "projects": {
-    "c:\\Users\\dariy\\OneDrive\\Рабочий стол\\Selenium\\Laboratory_training\\EpamTests\\EpamTests.csproj": {
+    "C:\\Users\\dariy\\OneDrive\\Рабочий стол\\Selenium\\Laboratory_training\\EpamTests\\EpamTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\dariy\\OneDrive\\Рабочий стол\\Selenium\\Laboratory_training\\EpamTests\\EpamTests.csproj",
+        "projectUniqueName": "C:\\Users\\dariy\\OneDrive\\Рабочий стол\\Selenium\\Laboratory_training\\EpamTests\\EpamTests.csproj",
         "projectName": "EpamTests",
-        "projectPath": "c:\\Users\\dariy\\OneDrive\\Рабочий стол\\Selenium\\Laboratory_training\\EpamTests\\EpamTests.csproj",
+        "projectPath": "C:\\Users\\dariy\\OneDrive\\Рабочий стол\\Selenium\\Laboratory_training\\EpamTests\\EpamTests.csproj",
         "packagesPath": "C:\\Users\\dariy\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\dariy\\OneDrive\\Рабочий стол\\Selenium\\Laboratory_training\\EpamTests\\obj\\",
+        "outputPath": "C:\\Users\\dariy\\OneDrive\\Рабочий стол\\Selenium\\Laboratory_training\\EpamTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

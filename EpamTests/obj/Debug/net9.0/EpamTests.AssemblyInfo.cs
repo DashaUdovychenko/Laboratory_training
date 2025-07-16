@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EpamTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80ea6ed76011a0ff89414179f5af1bdd1f9e3809")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f70a108ca0d56a7009115c1d63bc084c034a6df2")]
 [assembly: System.Reflection.AssemblyProductAttribute("EpamTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EpamTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

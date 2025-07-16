@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v17Bl1r4fVw=",
+  "dgSpecHash": "30GH9zpHn54=",
   "success": true,
-  "projectFilePath": "c:\\Users\\dariy\\OneDrive\\Рабочий стол\\Selenium\\Laboratory_training\\EpamTests\\EpamTests.csproj",
+  "projectFilePath": "C:\\Users\\dariy\\OneDrive\\Рабочий стол\\Selenium\\Laboratory_training\\EpamTests\\EpamTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dariy\\.nuget\\packages\\microsoft.applicationinsights\\2.22.0\\microsoft.applicationinsights.2.22.0.nupkg.sha512",
     "C:\\Users\\dariy\\.nuget\\packages\\microsoft.codecoverage\\17.14.1\\microsoft.codecoverage.17.14.1.nupkg.sha512",

@@ -7,13 +7,11 @@ public class CareersPage
 {
     private readonly IWebDriver driver;
     private readonly WebDriverWait wait;
-
     public CareersPage(IWebDriver driver)
     {
         this.driver = driver;
         wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
     }
-
    public void ClickVisibleDreamJobLink()
     {
         wait.Until(driver =>
@@ -29,7 +27,6 @@ public class CareersPage
             throw new NoSuchElementException("Couldn't find visible 'Find your dream job' element.");
         }
 
-        // Спроба прокрутки + клік
         try
         {
             ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView({block:'center'});", visibleElement);
@@ -37,7 +34,6 @@ public class CareersPage
         }
         catch (ElementClickInterceptedException)
         {
-         // Альтернативна стратегія з Actions
             var actions = new OpenQA.Selenium.Interactions.Actions(driver);
             actions.MoveToElement(visibleElement).Click().Perform();
         }

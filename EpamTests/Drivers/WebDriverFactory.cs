@@ -5,15 +5,22 @@ namespace EpamTests.Drivers;
 
 public static class WebDriverFactory
 {
-    public static IWebDriver CreateDriver()
+    public static IWebDriver CreateDriver(bool headless = false)
     {
-        var opptions = new ChromeOptions();
-        opptions.AddArgument("--start-maximized");
+        var options = new ChromeOptions();
+        options.AddArgument("--start-maximized");
 
-        var driver = new ChromeDriver(opptions);
+        if (headless)
+        {
+            options.AddArgument("--headless=new");
+        }
 
-        driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+        string downLoadDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
 
-        return driver;
+        options.AddUserProfilePreference("download.default_directory", downLoadDir);
+        options.AddUserProfilePreference("download.prompt_for_download", false);
+        options.AddUserProfilePreference("disable-popup-blocking", true);
+
+        return new ChromeDriver(options);
     }
 }

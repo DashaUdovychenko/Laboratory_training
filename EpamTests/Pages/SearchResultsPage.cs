@@ -10,46 +10,48 @@ public class SearchResultsPage
 
     public SearchResultsPage(IWebDriver driver)
     {
-        this.driver = driver;
+        this.driver = driver ?? throw new ArgumentNullException(nameof(driver));
         wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
     }
 
-    private IWebElement LatestResult => driver.FindElement(By.XPath("(//h5/a)[last()]"));
+    private By latestResult = By.XPath("//h5/a");
 
     public string GetLatestResultText()
     {
-        var element = wait.Until(driver =>
-        {
-            try
-            {
-                var el = driver.FindElement(By.XPath("(//h5/a)[last()]"));
-                return el.Displayed ? el : null;
-            }
-            catch (NoSuchElementException)
-            {
-                return null;
-            }
-        });
-
-        return element.Text;
+        wait.Until(d => driver.FindElement(latestResult).Displayed && driver.FindElement(latestResult).Enabled);
+        return driver.FindElement(latestResult).Text.Trim();
     }
 
-    public void ClickLatestResult()
-    {
-        LatestResult.Click();
-    }
-
-    private IReadOnlyCollection<IWebElement> GlobalSearchResultLinks =>
-        driver.FindElements(By.CssSelector("div.search-results__items a.search-results__title-link"));
+    private readonly By globalSearchResultLinks = By.CssSelector("div.search-results__items a.search-results__title-link");
 
     public bool AnyGlobalResultsExist()
     {
-        return GlobalSearchResultLinks.Any();
+        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+
+        try
+        {
+            return wait.Until(d =>
+            {
+                var results = d.FindElements(globalSearchResultLinks);
+                return results.Any();
+            });
+        }
+        catch (WebDriverTimeoutException)
+        {
+            return false;
+        }
     }
 
     public bool AllGlobalResultsContain(string keyword)
     {
-        return GlobalSearchResultLinks
+        var globalSearchResultLinks = driver.FindElements(this.globalSearchResultLinks);
+        
+        if (globalSearchResultLinks.Count == 0)
+        {
+            return false;
+        }
+
+        return globalSearchResultLinks
             .Select(link => link.Text)
             .All(text => text.Contains(keyword, StringComparison.OrdinalIgnoreCase));
     }

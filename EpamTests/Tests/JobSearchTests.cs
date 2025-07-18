@@ -29,7 +29,7 @@ public class JobSearchTests
 
         home.GoTo();
         home.ClickCareers();
-        careers.ClickVisibleDreamJobLink();
+        careers.ClickDreamJobLink();
         CookieConsentHelper.AcceptCookies(driver);
 
         jobSearch.EnterKeyword(keyword);

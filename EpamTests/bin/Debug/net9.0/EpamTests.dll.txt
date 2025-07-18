@@ -1,3 +1,4 @@
+EpamTests.Tests.CarouselTests.ValidateArticleTitleMatchesCarousel
 EpamTests.Tests.DownloadTests.ValidateFileDownload("EPAM_Corporate_Overview_Q4FY-2024.pdf")
 EpamTests.Tests.GlobalSearchTests.ValidateSearchResults("BLOCKCHAIN")
 EpamTests.Tests.GlobalSearchTests.ValidateSearchResults("Cloud")

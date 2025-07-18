@@ -1,17 +1,23 @@
 using EpamTests.Helpers;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace EpamTests.Pages;
 
 public class HomePage
 {
     private readonly IWebDriver driver;
-    public HomePage(IWebDriver driver) => this.driver = driver;
+    private readonly WebDriverWait wait;
+    public HomePage(IWebDriver driver)
+    {
+        this.driver = driver ?? throw new ArgumentNullException(nameof(driver));
+        wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+    }
 
-    private IWebElement Careers => driver.FindElement(By.CssSelector("li.top-navigation__item.epam:last-of-type"));
-    private IWebElement searchIcon => driver.FindElement(By.CssSelector("span.search-icon.header-search__search-icon"));
-    private IWebElement searchField => driver.FindElement(By.Id("new_form_search"));
-    private IWebElement btnFind => driver.FindElement(By.ClassName("bth-text-layer"));
+    private By careers = By.CssSelector("li.top-navigation__item.epam:last-of-type");
+    private By searchIcon = By.CssSelector("span.search-icon.header-search__search-icon");
+    private By searchField = By.Id("new_form_search");
+    private By btnFind = By.ClassName("bth-text-layer");
 
     public void GoTo()
     {
@@ -21,22 +27,27 @@ public class HomePage
 
     public void ClickCareers()
     {
-        Careers.Click();
+        wait.Until(d => driver.FindElement(careers).Displayed && driver.FindElement(careers).Enabled);
+        driver.FindElement(careers).Click();
     }
 
     public void ClickSearchIcon()
     {
-        searchIcon.Click();
+        wait.Until(d => driver.FindElement(searchIcon).Displayed && driver.FindElement(searchIcon).Enabled);
+        driver.FindElement(searchIcon).Click();
     }
 
     public void EnterSearchKeyword(string keyword)
     {
-        searchField.Clear();
-        searchField.SendKeys(keyword);
+        wait.Until(d => driver.FindElement(searchField).Displayed && driver.FindElement(searchField).Enabled);
+
+        driver.FindElement(searchField).Click();
+        driver.FindElement(searchField).SendKeys(keyword);
     }
 
     public void ClickFind()
     {
-        btnFind.Click();
+        wait.Until(d => driver.FindElement(btnFind).Displayed && driver.FindElement(btnFind).Enabled);
+        driver.FindElement(btnFind).Click();
     }
 }

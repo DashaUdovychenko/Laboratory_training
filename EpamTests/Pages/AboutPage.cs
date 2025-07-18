@@ -11,17 +11,18 @@ public class AboutPage
 
     public AboutPage(IWebDriver driver)
     {
-        this.driver = driver;
+        this.driver = driver ?? throw new ArgumentNullException(nameof(driver));
         wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
     }
 
-    private IWebElement aboutMenu => driver.FindElement(By.CssSelector("a.top-navigation__item-link.js-op[href='/about']"));
+    private By aboutMenu = By.CssSelector("a.top-navigation__item-link.js-op[href='/about']");
     private IWebElement epamAtGlanceSection => driver.FindElement(By.XPath("//span[contains(@class, 'font-size-80-33') and contains(normalize-space(.), 'EPAM at a Glance')]"));
-    private IWebElement downloadBrochureBtn => driver.FindElement(By.XPath("//span[contains(@class, 'button__content--desktop') and normalize-space(text())='DOWNLOAD']"));
+    private By downloadBrochureBtn = By.XPath("//span[contains(@class, 'button__content--desktop') and normalize-space(text())='DOWNLOAD']");
 
     public void GoToAbout()
     {
-        aboutMenu.Click();
+        wait.Until(d => driver.FindElement(aboutMenu).Displayed && driver.FindElement(aboutMenu).Enabled);
+        driver.FindElement(aboutMenu).Click();
     }
 
     public void ScrollToGlanceSection()
@@ -32,6 +33,7 @@ public class AboutPage
 
     public void ClickDownload()
     {
-        downloadBrochureBtn.Click();
+        wait.Until(d => driver.FindElement(downloadBrochureBtn).Displayed && driver.FindElement(downloadBrochureBtn).Enabled);
+        driver.FindElement(downloadBrochureBtn).Click();
     }
 }

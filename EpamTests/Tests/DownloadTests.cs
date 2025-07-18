@@ -10,7 +10,7 @@ public class DownloadTests
 {
     private IWebDriver driver;
     private string downloadDir;
-    private string expectedFileName = "EPAM_Systems_Company_Overview.pdf";
+    private string expectedFileName = "EPAM_Corporate_Overview_Q4FY-2024.pdf";
 
     [SetUp]
     public void SetUp()

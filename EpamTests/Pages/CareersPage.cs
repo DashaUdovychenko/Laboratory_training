@@ -7,35 +7,18 @@ public class CareersPage
 {
     private readonly IWebDriver driver;
     private readonly WebDriverWait wait;
+
+    private readonly By dreamJobLinkBy = By.XPath("(//a[normalize-space(text())='Find Your Dream Job'])[6]");
+
     public CareersPage(IWebDriver driver)
     {
-        this.driver = driver;
+        this.driver = driver ?? throw new ArgumentNullException(nameof(driver));
         wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
     }
-   public void ClickVisibleDreamJobLink()
+
+    public void ClickDreamJobLink()
     {
-        wait.Until(driver =>
-            driver.FindElements(By.XPath("//a[normalize-space(text())='Find Your Dream Job']"))
-                .Any(e => e.Displayed && e.Enabled));
-
-        var elements = driver.FindElements(By.XPath("//a[normalize-space(text())='Find Your Dream Job']"));
-
-        var visibleElement = elements.FirstOrDefault(e => e.Displayed && e.Enabled);
-
-        if (visibleElement == null)
-        {
-            throw new NoSuchElementException("Couldn't find visible 'Find your dream job' element.");
-        }
-
-        try
-        {
-            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView({block:'center'});", visibleElement);
-            visibleElement.Click();
-        }
-        catch (ElementClickInterceptedException)
-        {
-            var actions = new OpenQA.Selenium.Interactions.Actions(driver);
-            actions.MoveToElement(visibleElement).Click().Perform();
-        }
+        wait.Until(d => driver.FindElement(dreamJobLinkBy).Displayed && driver.FindElement(dreamJobLinkBy).Enabled);
+        driver.FindElement(dreamJobLinkBy).Click();
     }
 }

@@ -1,0 +1,58 @@
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+
+namespace EpamTests.Pages;
+
+public class SearchResultsPage
+{
+    private readonly IWebDriver driver;
+    private readonly WebDriverWait wait;
+
+    public SearchResultsPage(IWebDriver driver)
+    {
+        this.driver = driver ?? throw new ArgumentNullException(nameof(driver));
+        wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+    }
+
+    private By latestResult = By.XPath("//h5/a");
+
+    public string GetLatestResultText()
+    {
+        wait.Until(d => driver.FindElement(latestResult).Displayed && driver.FindElement(latestResult).Enabled);
+        return driver.FindElement(latestResult).Text.Trim();
+    }
+
+    private readonly By globalSearchResultLinks = By.CssSelector("div.search-results__items a.search-results__title-link");
+
+    public bool AnyGlobalResultsExist()
+    {
+        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+
+        try
+        {
+            return wait.Until(d =>
+            {
+                var results = d.FindElements(globalSearchResultLinks);
+                return results.Any();
+            });
+        }
+        catch (WebDriverTimeoutException)
+        {
+            return false;
+        }
+    }
+
+    public bool AllGlobalResultsContain(string keyword)
+    {
+        var globalSearchResultLinks = driver.FindElements(this.globalSearchResultLinks);
+        
+        if (globalSearchResultLinks.Count == 0)
+        {
+            return false;
+        }
+
+        return globalSearchResultLinks
+            .Select(link => link.Text)
+            .All(text => text.Contains(keyword, StringComparison.OrdinalIgnoreCase));
+    }
+}

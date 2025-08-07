@@ -1,0 +1,2 @@
+bdd.Features.EPAMAIServicesNavigationFeature.NavigateToASpecificAIServiceAndVerifyItsContents("Generative AI","Generative AI",null)
+bdd.Features.EPAMAIServicesNavigationFeature.NavigateToASpecificAIServiceAndVerifyItsContents("Responsible AI","Responsible AI",null)

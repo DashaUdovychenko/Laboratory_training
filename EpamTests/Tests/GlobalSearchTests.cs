@@ -1,42 +1,52 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
-using EpamTests.Pages;
-using EpamTests.Drivers;
+using EpamTests.Bussines.Pages;
+using EpamTests.Core.Base;
+using EpamTests.Core.Driver;
+using EpamTests.Core.Logging;
 
 namespace EpamTests.Tests;
 
 [TestFixture]
-public class GlobalSearchTests
+public class GlobalSearchTests : BaseTest
 {
-    private IWebDriver driver;
-
-    [SetUp]
-    public void Setup()
-    {
-        driver = WebDriverFactory.CreateDriver();
-    }
-
     [Test]
     [TestCase("BLOCKCHAIN")]
     [TestCase("Cloud")]
     [TestCase("Automation")]
     public void ValidateSearchResults(string keyword)
     {
-        var homePage = new HomePage(driver);
-        homePage.GoTo();
-        homePage.ClickSearchIcon();
-        homePage.EnterSearchKeyword(keyword);
-        homePage.ClickFind();
+        Logger.Info($"Test started: Validate search results for keyword '{keyword}'.");
 
-        var searchResultsPage = new SearchResultsPage(driver);
+        try
+        {
+            var homePage = new HomePage(Driver);
+            homePage.GoTo();
+            Logger.Debug("Navigated to Home Page.");
 
-        Assert.That(searchResultsPage.AnyGlobalResultsExist(), Is.True, "No search results were found.");
-        Assert.That(searchResultsPage.AllGlobalResultsContain(keyword),Is.True, $"Not all search results contain the keyword '{keyword}'.");
-    }
+            Logger.Info("Clicking search icon.");
+            homePage.ClickSearchIcon();
+
+            Logger.Info($"Entering search keyword: {keyword}");
+            homePage.EnterSearchKeyword(keyword);
+
+            Logger.Info("Clicking find button.");
+            homePage.ClickFind();
+
+            var searchResultsPage = new SearchResultsPage(Driver);
+
+            Logger.Info("Validating if any search results exist.");
+            Assert.That(searchResultsPage.AnyGlobalResultsExist(), Is.True, "No search results were found.");
+
+            Logger.Info($"Validating that all results contain keyword '{keyword}'.");
+            Assert.That(searchResultsPage.AllGlobalResultsContain(keyword),Is.True, $"Not all search results contain the keyword '{keyword}'.");
     
-    [TearDown]
-    public void Teardown()
-    {
-        driver.Quit();
+            Logger.Info("Test passed.");
+        }
+        catch (AssertionException ex)
+        {
+            Logger.Error($"Test failed with exception: {ex.Message}");
+            throw;
+        }
     }
 }

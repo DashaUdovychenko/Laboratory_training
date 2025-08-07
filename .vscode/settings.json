@@ -1,2 +1,7 @@
 {
+  "dotnet.testExplorer.testProjectPath": "EpamTests",
+  "dotnet.testExplorer.testFramework": "nunit",
+  "dotnet.testExplorer.showExplorer": true,
+  "dotnet.testExplorer.usePreviewSdk": true,
+  "dotnet.testExplorer.logLevel": "info"
 }

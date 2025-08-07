@@ -2,7 +2,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 
-namespace EpamTests.Pages;
+namespace EpamTests.Bussines.Pages;
 
 public class AboutPage
 {

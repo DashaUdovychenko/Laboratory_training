@@ -2,12 +2,13 @@ using EpamTests.Helpers;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace EpamTests.Pages;
+namespace EpamTests.Bussines.Pages;
 
 public class HomePage
 {
     private readonly IWebDriver driver;
     private readonly WebDriverWait wait;
+
     public HomePage(IWebDriver driver)
     {
         this.driver = driver ?? throw new ArgumentNullException(nameof(driver));
@@ -21,7 +22,7 @@ public class HomePage
 
     public void GoTo()
     {
-        driver.Navigate().GoToUrl("https://www.epam.com/");
+        driver.Navigate().GoToUrl("https://www.epam.com/?_gl=1*1lcowp0*_ga*ODU2ODQ2MzY0LjE3MjgxOTMxMTk.*_ga_WBGDS7S6W6*MTc0MTkwMjAxOS4xMS4xLjE3NDE5MDQwNTMuNjAuMC4w");
         CookieConsentHelper.AcceptCookies(driver);
     }
 

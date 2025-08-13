@@ -1,0 +1,5 @@
+ApiAutomation.Tests.ApiTests.UserApiTests.ValidateContentOfResponseBodyForListOfUsers
+ApiAutomation.Tests.ApiTests.UserApiTests.ValidateListOfUsersCanBeReceived
+ApiAutomation.Tests.ApiTests.UserApiTests.ValidateResponseHeaderForListOfUsers
+ApiAutomation.Tests.ApiTests.UserApiTests.ValidateUserCanBeCreated
+ApiAutomation.Tests.ApiTests.UserApiTests.ValidateUserNotFound

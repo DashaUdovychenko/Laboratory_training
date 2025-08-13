@@ -1,0 +1,11 @@
+C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Business\bin\Debug\net9.0\ApiAutomation.Business.deps.json
+C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Business\bin\Debug\net9.0\ApiAutomation.Business.dll
+C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Business\bin\Debug\net9.0\ApiAutomation.Business.pdb
+C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.AssemblyInfoInputs.cache
+C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.AssemblyInfo.cs
+C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.csproj.CoreCompileInputs.cache
+C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.dll
+C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Business\obj\Debug\net9.0\refint\ApiAutomation.Business.dll
+C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.pdb
+C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Business\obj\Debug\net9.0\ref\ApiAutomation.Business.dll

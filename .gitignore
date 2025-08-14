@@ -1,3 +1,4 @@
 # .NET Service Files
 bin/
 obj/
+.vs/

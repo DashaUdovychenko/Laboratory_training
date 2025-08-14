@@ -1,5 +1,5 @@
 {
-  "dotnet.testExplorer.testProjectPath": "EpamTests",
+  "dotnet.testExplorer.testProjectPath": ".",
   "dotnet.testExplorer.testFramework": "nunit",
   "dotnet.testExplorer.showExplorer": true,
   "dotnet.testExplorer.usePreviewSdk": true,

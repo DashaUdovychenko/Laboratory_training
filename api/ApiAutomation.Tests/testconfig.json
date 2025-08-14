@@ -1,0 +1,4 @@
+{
+  "BaseUrl": "https://jsonplaceholder.typicode.com",
+  "LogLevel": "Info"
+}

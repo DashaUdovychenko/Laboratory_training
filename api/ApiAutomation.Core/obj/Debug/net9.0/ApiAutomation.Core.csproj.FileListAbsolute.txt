@@ -13,19 +13,19 @@ C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutoma
 C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Core\obj\Debug\net9.0\refint\ApiAutomation.Core.dll
 C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.pdb
 C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Core\obj\Debug\net9.0\ref\ApiAutomation.Core.dll
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\bin\Debug\net9.0\ApiAutomation.Core.deps.json
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\bin\Debug\net9.0\ApiAutomation.Core.dll
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\bin\Debug\net9.0\ApiAutomation.Core.pdb
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\bin\Debug\net9.0\ApiAutomation.Business.dll
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\bin\Debug\net9.0\ApiAutomation.Business.pdb
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.csproj.AssemblyReference.cache
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.GeneratedMSBuildEditorConfig.editorconfig
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.AssemblyInfoInputs.cache
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.AssemblyInfo.cs
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.csproj.CoreCompileInputs.cache
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.sourcelink.json
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutom.65674179.Up2Date
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.dll
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\refint\ApiAutomation.Core.dll
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.pdb
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ref\ApiAutomation.Core.dll
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\bin\Debug\net9.0\ApiAutomation.Core.deps.json
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\bin\Debug\net9.0\ApiAutomation.Core.dll
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\bin\Debug\net9.0\ApiAutomation.Core.pdb
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\bin\Debug\net9.0\ApiAutomation.Business.dll
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\bin\Debug\net9.0\ApiAutomation.Business.pdb
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.csproj.AssemblyReference.cache
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.AssemblyInfoInputs.cache
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.AssemblyInfo.cs
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.csproj.CoreCompileInputs.cache
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.sourcelink.json
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutom.65674179.Up2Date
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.dll
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\refint\ApiAutomation.Core.dll
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.pdb
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ref\ApiAutomation.Core.dll

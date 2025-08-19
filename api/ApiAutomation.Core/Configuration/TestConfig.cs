@@ -14,7 +14,7 @@ namespace ApiAutomation.Core.Configuration
 
         private static TestConfig Load(string filePath)
         {
-            var json = File.ReadAllText(filePath);
+            string json = File.ReadAllText(filePath);
             return JsonSerializer.Deserialize<TestConfig>(json)
                    ?? throw new InvalidOperationException("Cannot parse config");
         }

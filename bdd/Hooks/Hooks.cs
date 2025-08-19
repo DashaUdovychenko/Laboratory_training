@@ -18,7 +18,7 @@ namespace BDD.Hooks
         [BeforeScenario]
         public void BeforeScenario()
         {
-            var driver = DriverFactory.CreateDriver();
+            IWebDriver driver = DriverFactory.CreateDriver();
             scenarioContext["WebDriver"] = driver;
         }
 
@@ -27,7 +27,7 @@ namespace BDD.Hooks
         {
             if (scenarioContext.TryGetValue("WebDriver", out IWebDriver? driver))
             {
-                driver.Quit();
+                driver!.Quit();
             }
         }
     }

@@ -29,12 +29,12 @@ namespace ApiAutomation.Tests.ApiTests
         {
             Logger.Info("Test: Validate list of users can be received");
 
-            var response = await _userApiClient.GetUsersAsync();
+            RestResponse<List<UserModel>> response = await _userApiClient.GetUsersAsync();
 
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK), "Status code should be 200 OK");
             Assert.That(response.Data, Is.Not.Null.And.Not.Empty, "Response data should not be empty");
 
-            var user = response.Data.First();
+            UserModel user = response.Data.First();
             Assert.Multiple(() =>
             {
                 Assert.That(user.Id, Is.GreaterThan(0));
@@ -53,8 +53,8 @@ namespace ApiAutomation.Tests.ApiTests
         {
             Logger.Info("Test: Validate response header for list of users");
 
-            var request = new RestRequest("users", Method.Get);
-            var response = await _userApiClient.client.ExecuteAsync(request);
+            RestRequest request = new RestRequest("users", Method.Get);
+            RestResponse response = await _userApiClient.client.ExecuteAsync(request);
 
             Logger.Info($"Status Code: {response.StatusCode}");
             Logger.Info($"Content-Type (via ContentType property): {response.ContentType}");
@@ -70,17 +70,17 @@ namespace ApiAutomation.Tests.ApiTests
         {
             Logger.Info("Test: Validate content of response body for list of users");
 
-            var response = await _userApiClient.GetUsersAsync();
+            RestResponse<List<UserModel>> response = await _userApiClient.GetUsersAsync();
 
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK), "Status code should be 200 OK");
             Assert.That(response.Data, Is.Not.Null);
 
             Assert.That(response.Data.Count, Is.EqualTo(10), "Should receive exactly 10 users");
 
-            var distinctIds = response.Data.Select(u => u.Id).Distinct();
+            IEnumerable<int?> distinctIds = response.Data.Select(u => u.Id).Distinct();
             Assert.That(distinctIds.Count(), Is.EqualTo(10), "Each user should have a unique ID");
 
-            foreach (var user in response.Data)
+            foreach (UserModel user in response.Data)
             {
                 Assert.Multiple(() =>
                 {
@@ -97,12 +97,12 @@ namespace ApiAutomation.Tests.ApiTests
         {
             Logger.Info("Test: Validate user can be created");
 
-            var userToCreate = new UserRequestBuilder()
+            UserModel userToCreate = new UserRequestBuilder()
                 .WithName("Test User")
                 .WithUsername("testuser123")
                 .Build();
 
-            var response = await _userApiClient.CreateUserAsync(userToCreate);
+            RestResponse<UserModel> response = await _userApiClient.CreateUserAsync(userToCreate);
 
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.Created), "Status code should be 201 Created");
             Assert.That(response.Data, Is.Not.Null, "Response data should not be null");
@@ -114,8 +114,8 @@ namespace ApiAutomation.Tests.ApiTests
         {
             Logger.Info("Test: Validate user not found on invalid endpoint");
 
-            var request = new RestRequest("invalidendpoint", Method.Get);
-            var response = await _userApiClient.client.ExecuteAsync(request);
+            RestRequest request = new RestRequest("invalidendpoint", Method.Get);
+            RestResponse response = await _userApiClient.client.ExecuteAsync(request);
 
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.NotFound), "Status code should be 404 Not Found");
         }

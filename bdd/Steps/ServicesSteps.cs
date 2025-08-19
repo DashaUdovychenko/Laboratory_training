@@ -10,8 +10,8 @@ namespace BDD.Steps
     public class ServicesSteps
     {
         private readonly IWebDriver driver;
-        private HomePage homePage;
-        private ServicesPage servicesPage;
+        private HomePage? homePage;
+        private ServicesPage? servicesPage;
 
         public ServicesSteps(ScenarioContext scenarioContext)
         {
@@ -29,20 +29,20 @@ namespace BDD.Steps
         [When(@"I navigate to the ""(.*)"" service")]
         public void WhenINavigateToTheService(string categoryName)
         {
-            servicesPage = homePage.NavigateToService(categoryName);
+            servicesPage = homePage!.NavigateToService(categoryName);
         }
 
         [Then(@"the page title should contain ""(.*)""")]
         public void ThenThePageTitleShouldContain(string expectedTitle)
         {
-            string actualTitle = servicesPage.GetTitle();
+            string actualTitle = servicesPage!.GetTitle();
             Assert.That(actualTitle, Does.Contain(expectedTitle).IgnoreCase, $"Expected title to contain '{expectedTitle}', but got '{actualTitle}'");
         }
 
         [Then(@"the 'Our Related Expertise' section should be visible")]
         public void ThenTheOurRelatedExpertiseSectionShouldBeVisible()
         {
-            servicesPage.ScrollToRelatedExpertiseSection();
+            servicesPage!.ScrollToRelatedExpertiseSection();
             Assert.That(servicesPage.IsRelatedExpertiseSectionVisible(), Is.True, "The 'Our Related Expertise' section was not visible.");
         }
     }

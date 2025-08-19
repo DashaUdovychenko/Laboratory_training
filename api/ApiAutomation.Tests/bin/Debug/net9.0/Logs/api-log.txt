@@ -239,3 +239,16 @@
 2025-08-19 17:14:33,207 INFO  Received response with status code 200
 2025-08-19 17:14:33,207 INFO  Received response with status code 200
 2025-08-19 17:14:33,261 INFO  Received response with status code 201
+2025-08-19 18:11:08,680 INFO  Test: Validate response header for list of users
+2025-08-19 18:11:08,680 INFO  Test: Validate user not found on invalid endpoint
+2025-08-19 18:11:08,680 INFO  Test: Validate content of response body for list of users
+2025-08-19 18:11:08,679 INFO  Test: Validate user can be created
+2025-08-19 18:11:08,680 INFO  Test: Validate list of users can be received
+2025-08-19 18:11:08,691 INFO  Sending GET request to /users
+2025-08-19 18:11:08,691 INFO  Sending GET request to /users
+2025-08-19 18:11:08,693 INFO  Sending POST request to /users with user data
+2025-08-19 18:11:09,023 INFO  Status Code: OK
+2025-08-19 18:11:09,023 INFO  Content-Type (via ContentType property): application/json
+2025-08-19 18:11:09,047 INFO  Received response with status code 200
+2025-08-19 18:11:09,047 INFO  Received response with status code 200
+2025-08-19 18:11:09,324 INFO  Received response with status code 201

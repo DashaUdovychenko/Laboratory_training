@@ -38,11 +38,11 @@ public class HomePage
 
     private void HoverOverServicesMenu()
     {
-        var servicesMenu = wait.Until(d =>
+        IWebElement? servicesMenu = wait.Until(d =>
         {
             try
             {
-                var el = d.FindElement(servicesBtn);
+                IWebElement el = d.FindElement(servicesBtn);
                 return (el.Displayed && el.Enabled) ? el : null;
             }
             catch (NoSuchElementException)
@@ -56,9 +56,9 @@ public class HomePage
 
     private void ClickOnServiceCategory(string categoryName)
     {
-        var servicesList = wait.Until(driver =>
+        IReadOnlyCollection<IWebElement> servicesList = wait.Until(driver =>
         {
-            var elements = driver.FindElements(serviceCategoryLinks);
+            IReadOnlyCollection<IWebElement> elements = driver.FindElements(serviceCategoryLinks);
             return elements.Count > 0 ? elements : null;
         });
 

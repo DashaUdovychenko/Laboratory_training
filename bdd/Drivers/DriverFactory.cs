@@ -12,9 +12,9 @@ namespace BDD.Drivers
         {
             new DriverManager().SetUpDriver(new ChromeConfig());
 
-            var options = new ChromeOptions();
+            ChromeOptions options = new ChromeOptions();
 
-            var driver = new ChromeDriver(options);
+            ChromeDriver driver = new ChromeDriver(options);
 
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);

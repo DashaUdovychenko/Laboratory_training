@@ -12,8 +12,8 @@ namespace ApiAutomation.Core.Client
 
         public BaseApiClient(string baseUrl = null!)
         {
-            var url = baseUrl ?? TestConfig.Instance.BaseUrl;
-            var options = new RestClientOptions(url)
+            string url = baseUrl ?? TestConfig.Instance.BaseUrl;
+            RestClientOptions options = new RestClientOptions(url)
             {
                 ThrowOnAnyError = false
             };
@@ -23,10 +23,10 @@ namespace ApiAutomation.Core.Client
 
         public async Task<RestResponse> GetAsync(string resource)
         {
-            var request = new RestRequest(resource, Method.Get);
+            RestRequest request = new RestRequest(resource, Method.Get);
             LogRequest(request);
 
-            var response = await client.ExecuteAsync(request);
+            RestResponse response = await client.ExecuteAsync(request);
             LogResponse(response);
 
             return response;
@@ -34,11 +34,11 @@ namespace ApiAutomation.Core.Client
 
         public async Task<RestResponse> PostAsync(string resource, object body)
         {
-            var request = new RestRequest(resource, Method.Post);
+            RestRequest request = new RestRequest(resource, Method.Post);
             request.AddJsonBody(body);
             LogRequest(request);
 
-            var response = await client.ExecuteAsync(request);
+            RestResponse response = await client.ExecuteAsync(request);
             LogResponse(response);
             return response;
         }

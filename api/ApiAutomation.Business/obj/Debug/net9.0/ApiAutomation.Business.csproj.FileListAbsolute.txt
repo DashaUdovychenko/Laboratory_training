@@ -9,15 +9,15 @@ C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutoma
 C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Business\obj\Debug\net9.0\refint\ApiAutomation.Business.dll
 C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.pdb
 C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Business\obj\Debug\net9.0\ref\ApiAutomation.Business.dll
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\bin\Debug\net9.0\ApiAutomation.Business.deps.json
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\bin\Debug\net9.0\ApiAutomation.Business.dll
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\bin\Debug\net9.0\ApiAutomation.Business.pdb
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.GeneratedMSBuildEditorConfig.editorconfig
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.AssemblyInfoInputs.cache
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.AssemblyInfo.cs
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.csproj.CoreCompileInputs.cache
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.sourcelink.json
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.dll
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\refint\ApiAutomation.Business.dll
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.pdb
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\ref\ApiAutomation.Business.dll
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\bin\Debug\net9.0\ApiAutomation.Business.deps.json
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\bin\Debug\net9.0\ApiAutomation.Business.dll
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\bin\Debug\net9.0\ApiAutomation.Business.pdb
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.AssemblyInfoInputs.cache
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.AssemblyInfo.cs
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.csproj.CoreCompileInputs.cache
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.sourcelink.json
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.dll
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\refint\ApiAutomation.Business.dll
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\ApiAutomation.Business.pdb
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Business\obj\Debug\net9.0\ref\ApiAutomation.Business.dll

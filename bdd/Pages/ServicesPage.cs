@@ -20,13 +20,13 @@ public class ServicesPage
 
     public string GetTitle()
     {
-        var element = wait.Until(d => d.FindElement(Title));
+        IWebElement element = wait.Until(d => d.FindElement(Title));
         return element.Text.Trim();
     }
 
     public void ScrollToRelatedExpertiseSection()
     {
-        var element = wait.Until(d => d.FindElement(RelatedExpertiseSection));
+        IWebElement element = wait.Until(d => d.FindElement(RelatedExpertiseSection));
 
         Actions actions = new Actions(driver);
         actions.MoveToElement(element).Perform();
@@ -36,7 +36,7 @@ public class ServicesPage
     {
         try
         {
-            var element = wait.Until(d => d.FindElement(RelatedExpertiseSection));
+            IWebElement element = wait.Until(d => d.FindElement(RelatedExpertiseSection));
             return element.Displayed;
         }
         catch (NoSuchElementException)

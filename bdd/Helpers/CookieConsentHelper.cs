@@ -9,10 +9,10 @@ public static class CookieConsentHelper
     {
         try
         {
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
-            var cookieBtn = wait.Until(d =>
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            IWebElement cookieBtn = wait.Until(d =>
             {
-                var el = d.FindElement(By.Id("onetrust-accept-btn-handler"));
+                IWebElement el = d.FindElement(By.Id("onetrust-accept-btn-handler"));
                 return (el.Displayed && el.Enabled) ? el : null;
             });
 

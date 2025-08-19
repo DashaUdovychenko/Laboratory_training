@@ -21,10 +21,10 @@ public class JobSearchTests : BaseTest
 
         try
         {
-            var home = new HomePage(Driver);
-            var careers = new CareersPage(Driver);
-            var jobSearch = new JobSearchPage(Driver);
-            var results = new SearchResultsPage(Driver);
+            HomePage home = new HomePage(Driver);
+            CareersPage careers = new CareersPage(Driver);
+            JobSearchPage jobSearch = new JobSearchPage(Driver);
+            SearchResultsPage results = new SearchResultsPage(Driver);
 
             Logger.Debug("Navigating to Home page.");
             home.GoTo();

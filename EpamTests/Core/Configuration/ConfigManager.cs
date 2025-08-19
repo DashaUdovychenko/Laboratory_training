@@ -22,7 +22,7 @@ public static class ConfigManager
             throw new FileNotFoundException($"Configuration file not found at path: {ConfigPath}");
         }
 
-        var json = File.ReadAllText(ConfigPath);
+        string json = File.ReadAllText(ConfigPath);
         return JsonSerializer.Deserialize<Config>(json)!;
     });
 

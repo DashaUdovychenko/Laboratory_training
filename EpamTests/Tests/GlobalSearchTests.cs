@@ -20,7 +20,7 @@ public class GlobalSearchTests : BaseTest
 
         try
         {
-            var homePage = new HomePage(Driver);
+            HomePage homePage = new HomePage(Driver);
             homePage.GoTo();
             Logger.Debug("Navigated to Home Page.");
 
@@ -33,7 +33,7 @@ public class GlobalSearchTests : BaseTest
             Logger.Info("Clicking find button.");
             homePage.ClickFind();
 
-            var searchResultsPage = new SearchResultsPage(Driver);
+            SearchResultsPage searchResultsPage = new SearchResultsPage(Driver);
 
             Logger.Info("Validating if any search results exist.");
             Assert.That(searchResultsPage.AnyGlobalResultsExist(), Is.True, "No search results were found.");

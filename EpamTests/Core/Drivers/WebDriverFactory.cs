@@ -13,10 +13,10 @@ public static class WebDriverFactory
 {
     public static IWebDriver CreateDriverFromConfig()
     {
-        var settings = ConfigManager.Settings;
-        var browser = settings.Browser?.ToLower() ?? "chrome";
-        var headless = settings.Headless;
-        var downloadDir = GetDownloadDirectory(settings.DownloadDirectory);
+        Config settings = ConfigManager.Settings;
+        string browser = settings.Browser?.ToLower() ?? "chrome";
+        bool headless = settings.Headless;
+        string downloadDir = GetDownloadDirectory(settings.DownloadDirectory);
 
         Logger.Info($"Initializing WebDriver: {browser}, Headless: {headless}, DownloadDir: {downloadDir}");
 

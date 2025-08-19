@@ -15,8 +15,8 @@ public class CarouselTests : BaseTest
     {
         Logger.Info("Test started: Validate that the article title matches the carousel title after clicking Read More.");
 
-        var home = new HomePage(Driver);
-        var insights = new InsightsPage(Driver);
+        HomePage home = new HomePage(Driver);
+        InsightsPage insights = new InsightsPage(Driver);
 
         Logger.Debug("Creating page objects for HomePage and InsightsPage.");
 

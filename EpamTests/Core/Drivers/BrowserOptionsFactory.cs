@@ -13,7 +13,7 @@ public static class BrowserOptionsFactory
 {
     public static ChromeOptions GetChromeOptions(bool headless, string downloadDir)
     {
-        var options = new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.AddArgument("--start-maximized");
 
         if (headless)
@@ -33,7 +33,7 @@ public static class BrowserOptionsFactory
 
     public static FirefoxOptions GetFirefoxOptions(bool headless, string downloadDir)
     {
-        var options = new FirefoxOptions();
+        FirefoxOptions options = new FirefoxOptions();
 
         if (headless)
             options.AddArgument("--headless");
@@ -48,7 +48,7 @@ public static class BrowserOptionsFactory
 
     public static EdgeOptions GetEdgeOptions(bool headless, string downloadDir)
     {
-        var options = new EdgeOptions();
+        EdgeOptions options = new EdgeOptions();
         options.AddArgument("--start-maximized");
 
         if (headless)

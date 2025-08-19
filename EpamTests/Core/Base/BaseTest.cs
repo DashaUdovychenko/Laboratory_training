@@ -32,8 +32,9 @@ public abstract class BaseTest
 
     private void LogTestResult()
     {
-        var status = TestContext.CurrentContext.Result.Outcome.Status;
-        var safeTestName = System.Text.RegularExpressions.Regex
+        TestStatus status = TestContext.CurrentContext.Result.Outcome.Status;
+
+        string safeTestName = System.Text.RegularExpressions.Regex
                     .Replace(TestContext.CurrentContext.Test.Name, @"[\\/:*?""<>|()]", "_")
                     .Replace(" ", "_");
 
@@ -54,9 +55,9 @@ public abstract class BaseTest
         {
             Logger.Info("Attempting to capture screenshot.");
 
-            var screenshot = ((ITakesScreenshot)Driver).GetScreenshot();
-            var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
-            var screenshotsDir = Path.Combine(AppContext.BaseDirectory, ScreenshotFolderName);
+            Screenshot screenshot = ((ITakesScreenshot)Driver).GetScreenshot();
+            string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+            string screenshotsDir = Path.Combine(AppContext.BaseDirectory, ScreenshotFolderName);
 
             if (!Directory.Exists(screenshotsDir))
             {
@@ -64,7 +65,7 @@ public abstract class BaseTest
                 Logger.Debug($"Created screenshot directory: {screenshotsDir}");
             }
 
-            var filePath = Path.Combine(screenshotsDir, $"{safeTestName}_{timestamp}.png");
+            string filePath = Path.Combine(screenshotsDir, $"{safeTestName}_{timestamp}.png");
             screenshot.SaveAsFile(filePath);
 
             Logger.Info($"Screenshot saved: {filePath}");

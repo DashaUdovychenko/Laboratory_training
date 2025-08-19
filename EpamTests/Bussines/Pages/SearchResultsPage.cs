@@ -32,7 +32,7 @@ public class SearchResultsPage
         {
             return wait.Until(d =>
             {
-                var results = d.FindElements(globalSearchResultLinks);
+                IReadOnlyCollection<IWebElement> results = d.FindElements(globalSearchResultLinks);
                 return results.Any();
             });
         }

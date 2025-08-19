@@ -45,8 +45,8 @@ public class DownloadTests : BaseTest
         try
         {
             Logger.Info("Creating page objects");
-            var home = new HomePage(Driver);
-            var about = new AboutPage(Driver);
+            HomePage home = new HomePage(Driver);
+            AboutPage about = new AboutPage(Driver);
 
             Logger.Info("Navigating to Home page.");
             home.GoTo();

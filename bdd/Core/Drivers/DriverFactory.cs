@@ -4,7 +4,7 @@ using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 using System;
 
-namespace BDD.Drivers
+namespace BDD.Core.Drivers
 {
     public static class DriverFactory
     {

@@ -11,7 +11,7 @@
 #region Designer generated code
 #pragma warning disable
 using Reqnroll;
-namespace bdd.Features
+namespace bdd.Tests.Features
 {
     
     
@@ -27,7 +27,7 @@ namespace bdd.Features
         
         private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en"), "Features", "EPAM AI Services Navigation", "  As a user\r\n  I want to navigate to different AI services on the EPAM website\r\n " +
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en"), "Tests/Features", "EPAM AI Services Navigation", "  As a user\r\n  I want to navigate to different AI services on the EPAM website\r\n " +
                 " So that I can verify the page title and \'Our Related Expertise\' section", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
         
 #line 1 "Services.feature"

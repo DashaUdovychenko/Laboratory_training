@@ -1,10 +1,10 @@
-using BDD.Pages;
-using BDD.Helpers;
+using BDD.Bussines.Pages;
+using BDD.Core.Helpers;
 using OpenQA.Selenium;
 using Reqnroll;
 using NUnit.Framework;
 
-namespace BDD.Steps
+namespace BDD.Tests.Steps
 {
     [Binding]
     public class ServicesSteps

@@ -181,8 +181,8 @@ C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\Ap
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\bin\Debug\net9.0\log4net.config
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\bin\Debug\net9.0\testconfig.json
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\bin\Debug\net9.0\NUnit3.TestAdapter.dll
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\bin\Debug\net9.0\ApiAutomation.Tests.deps.json
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\bin\Debug\net9.0\ApiAutomation.Tests.runtimeconfig.json
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\bin\Debug\net9.0\ApiAutomation.Tests.deps.json
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\bin\Debug\net9.0\ApiAutomation.Tests.runtimeconfig.json
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\bin\Debug\net9.0\ApiAutomation.Tests.dll
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\bin\Debug\net9.0\ApiAutomation.Tests.pdb
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\bin\Debug\net9.0\log4net.dll
@@ -335,9 +335,9 @@ C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\Ap
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\obj\Debug\net9.0\ApiAutomation.Tests.AssemblyInfo.cs
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\obj\Debug\net9.0\ApiAutomation.Tests.csproj.CoreCompileInputs.cache
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\obj\Debug\net9.0\ApiAutomation.Tests.sourcelink.json
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\obj\Debug\net9.0\ApiAutom.1CC903E3.Up2Date
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\obj\Debug\net9.0\ApiAutom.1CC903E3.Up2Date
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\obj\Debug\net9.0\ApiAutomation.Tests.dll
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\obj\Debug\net9.0\refint\ApiAutomation.Tests.dll
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\obj\Debug\net9.0\ApiAutomation.Tests.pdb
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\obj\Debug\net9.0\ApiAutomation.Tests.genruntimeconfig.cache
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\obj\Debug\net9.0\ref\ApiAutomation.Tests.dll
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\obj\Debug\net9.0\ApiAutomation.Tests.genruntimeconfig.cache
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Tests\obj\Debug\net9.0\ref\ApiAutomation.Tests.dll

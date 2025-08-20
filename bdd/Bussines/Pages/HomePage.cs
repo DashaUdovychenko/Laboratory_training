@@ -4,7 +4,7 @@ using OpenQA.Selenium.Interactions;
 using System;
 using System.Linq;
 
-namespace BDD.Pages;
+namespace BDD.Bussines.Pages;
 
 public class HomePage
 {

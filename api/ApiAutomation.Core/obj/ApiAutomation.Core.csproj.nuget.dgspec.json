@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\ApiAutomation.Core.csproj": {}
+    "c:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\ApiAutomation.Core.csproj": {}
   },
   "projects": {
     "c:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Business\\ApiAutomation.Business.csproj": {
@@ -70,14 +70,14 @@
         }
       }
     },
-    "C:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\ApiAutomation.Core.csproj": {
+    "c:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\ApiAutomation.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\ApiAutomation.Core.csproj",
+        "projectUniqueName": "c:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\ApiAutomation.Core.csproj",
         "projectName": "ApiAutomation.Core",
-        "projectPath": "C:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\ApiAutomation.Core.csproj",
+        "projectPath": "c:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\ApiAutomation.Core.csproj",
         "packagesPath": "C:\\Users\\dariy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\obj\\",
+        "outputPath": "c:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

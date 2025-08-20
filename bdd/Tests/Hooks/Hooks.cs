@@ -1,9 +1,9 @@
-using BDD.Drivers;
+using BDD.Core.Drivers;
 using OpenQA.Selenium;
 using Reqnroll;
-using BDD.Helpers;
+using BDD.Core.Helpers;
 
-namespace BDD.Hooks
+namespace BDD.Tests.Hooks
 {
     [Binding]
     public class Hooks

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "55dHYUFDdiI=",
+  "dgSpecHash": "hyUXaoOFKOU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\ApiAutomation.Core.csproj",
+  "projectFilePath": "c:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\ApiAutomation.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dariy\\.nuget\\packages\\log4net\\3.1.0\\log4net.3.1.0.nupkg.sha512",
     "C:\\Users\\dariy\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",

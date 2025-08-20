@@ -26,7 +26,7 @@ public class CarouselTests : BaseTest
         Logger.Info("Navigating to Insights section.");
         insights.GoToInsights();
 
-        Logger.Info("Clicking carousel 'Next' twice.");
+        Logger.Info("Clicking carousel 'Next' three times.");
         insights.ClickCarouselNext();
         insights.ClickCarouselNext();
 

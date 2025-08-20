@@ -57,13 +57,8 @@ public abstract class BaseTest
 
             Screenshot screenshot = ((ITakesScreenshot)Driver).GetScreenshot();
             string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
-            string screenshotsDir = Path.Combine(AppContext.BaseDirectory, ScreenshotFolderName);
 
-            if (!Directory.Exists(screenshotsDir))
-            {
-                Directory.CreateDirectory(screenshotsDir);
-                Logger.Debug($"Created screenshot directory: {screenshotsDir}");
-            }
+            string screenshotsDir = @"C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\EpamTests\Core\Logging\TestResults";
 
             string filePath = Path.Combine(screenshotsDir, $"{safeTestName}_{timestamp}.png");
             screenshot.SaveAsFile(filePath);

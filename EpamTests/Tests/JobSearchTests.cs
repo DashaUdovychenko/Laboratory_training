@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using EpamTests.Core.Base;
 using EpamTests.Bussines.Pages;
-using EpamTests.Helpers;
+using EpamTests.Core.Helpers;
 using EpamTests.Core.Logging;
 using System.Threading;
 using EpamTests.Core.Driver;

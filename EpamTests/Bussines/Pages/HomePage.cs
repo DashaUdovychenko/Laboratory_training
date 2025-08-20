@@ -1,4 +1,4 @@
-using EpamTests.Helpers;
+using EpamTests.Core.Helpers;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 

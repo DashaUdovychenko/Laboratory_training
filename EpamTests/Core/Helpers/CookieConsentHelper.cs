@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace EpamTests.Helpers;
+namespace EpamTests.Core.Helpers;
 
 public static class CookieConsentHelper
 {

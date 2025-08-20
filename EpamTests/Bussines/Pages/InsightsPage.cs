@@ -16,9 +16,9 @@ public class InsightsPage
 
     private By insightsMenu = By.CssSelector("a.top-navigation__item-link.js-op[href='/insights']");
     private By carouselNextBtn = By.XPath("//button[contains(@class, 'slider__right-arrow')]");
-    private By activeSlideTitle = By.XPath("(//p[@class='scaling-of-text-wrapper' and .//span[contains(text(), 'Security Strategy')]])[2]");
-    private By readMoreBtn = By.XPath("(//div[contains(@class, 'single-slide__content') and .//span[contains(@class, 'gradient-text') and contains(normalize-space(), 'Security Strategy')]]//a[normalize-space()='Read More'])[2]");
-    private By articleTitle = By.XPath("//div[@class='scaling-of-text-wrapper']//p");
+    private By activeSlideTitle = By.XPath("(//div[@class='text'])[6]");
+    private By readMoreBtn = By.XPath("(//div[contains(@class, 'single-slide__cta-container')]//a[contains(normalize-space(.), 'Read More')])[5]");
+    private By articleTitle = By.ClassName("header_and_download");
 
     public void GoToInsights()
     {

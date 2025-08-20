@@ -1,3 +1,4 @@
+using EpamTests.Core.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
@@ -22,6 +23,7 @@ public class JobSearchPage
 
     public void EnterKeyword(string keyword)
     {
+        Logger.Info($"Entering search keyword: {keyword}");
         wait.Until(d => driver.FindElement(keywordField).Displayed && driver.FindElement(keywordField).Enabled);
         driver.FindElement(keywordField).Click();
         driver.FindElement(keywordField).SendKeys(keyword);
@@ -29,6 +31,7 @@ public class JobSearchPage
 
     public void SelectAllLocations()
         {
+            Logger.Info("Selecting 'All Locations' from the dropdown.");
             wait.Until(d => driver.FindElement(locationDropdown).Displayed && driver.FindElement(locationDropdown).Enabled);
             driver.FindElement(locationDropdown).Click();
 
@@ -38,12 +41,14 @@ public class JobSearchPage
 
     public void SelectRemote()
     {
+        Logger.Info("Selecting 'Remote' checkbox.");
         wait.Until(d => driver.FindElement(remoteCheckbox).Displayed && driver.FindElement(remoteCheckbox).Enabled);
         driver.FindElement(remoteCheckbox).Click();
     }
 
     public void ClickFind()
     {
+        Logger.Info("Clicking the 'Find' button.");
         wait.Until(d => driver.FindElement(findButton).Displayed && driver.FindElement(findButton).Enabled);
         driver.FindElement(findButton).Click();
     }

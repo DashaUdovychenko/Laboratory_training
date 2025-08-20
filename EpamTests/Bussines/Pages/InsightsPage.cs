@@ -1,3 +1,4 @@
+using EpamTests.Core.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
@@ -22,12 +23,14 @@ public class InsightsPage
 
     public void GoToInsights()
     {
+        Logger.Info("Navigating to Insights section.");
         wait.Until(d => driver.FindElement(insightsMenu).Displayed && driver.FindElement(insightsMenu).Enabled);
         driver.FindElement(insightsMenu).Click();
     }
 
     public void ClickCarouselNext()
     {
+        Logger.Info("Clicking carousel 'Next' button.");
         wait.Until(d => driver.FindElement(carouselNextBtn).Displayed && driver.FindElement(carouselNextBtn).Enabled);
         driver.FindElement(carouselNextBtn).Click();
     }
@@ -41,6 +44,7 @@ public class InsightsPage
 
     public void ClickReadMore()
     {
+        Logger.Info("Clicking Read More link on carousel.");
         wait.Until(d => driver.FindElement(readMoreBtn).Displayed && driver.FindElement(readMoreBtn).Enabled);
         driver.FindElement(readMoreBtn).Click();
     }

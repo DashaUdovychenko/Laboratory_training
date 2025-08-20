@@ -1,3 +1,4 @@
+using EpamTests.Core.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
@@ -18,6 +19,7 @@ public class SearchResultsPage
 
     public string GetLatestResultText()
     {
+        Logger.Info("Retrieving the text of the latest search result.");
         wait.Until(d => driver.FindElement(latestResult).Displayed && driver.FindElement(latestResult).Enabled);
         return driver.FindElement(latestResult).Text.Trim();
     }
@@ -26,6 +28,7 @@ public class SearchResultsPage
 
     public bool AnyGlobalResultsExist()
     {
+        Logger.Info("Checking if any global search results exist.");
         var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
 
         try
@@ -37,13 +40,14 @@ public class SearchResultsPage
             });
         }
         catch (WebDriverTimeoutException)
-        {
+        { 
             return false;
         }
     }
 
     public bool AllGlobalResultsContain(string keyword)
     {
+        Logger.Info($"Validating that all global search results contain the keyword '{keyword}'.");
         var globalSearchResultLinks = driver.FindElements(this.globalSearchResultLinks);
         
         if (globalSearchResultLinks.Count == 0)

@@ -393,11 +393,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\ApiAutomation.Core.csproj",
+      "projectUniqueName": "C:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\ApiAutomation.Core.csproj",
       "projectName": "ApiAutomation.Core",
-      "projectPath": "c:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\ApiAutomation.Core.csproj",
+      "projectPath": "C:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\ApiAutomation.Core.csproj",
       "packagesPath": "C:\\Users\\dariy\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\obj\\",
+      "outputPath": "C:\\Users\\dariy\\OneDrive\\Рабочий стол\\CI_CD\\Laboratory_training\\api\\ApiAutomation.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

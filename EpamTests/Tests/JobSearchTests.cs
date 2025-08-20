@@ -26,28 +26,15 @@ public class JobSearchTests : BaseTest
             JobSearchPage jobSearch = new JobSearchPage(Driver);
             SearchResultsPage results = new SearchResultsPage(Driver);
 
-            Logger.Debug("Navigating to Home page.");
             home.GoTo();
-
-            Logger.Info("Clicking Careers link.");
             home.ClickCareers();
-
-            Logger.Info("Clicking Dream Job link.");
             careers.ClickDreamJobLink();
-
-            Logger.Info("Accepting cookies.");
             CookieConsentHelper.AcceptCookies(Driver);
-
-            Logger.Info($"Entering job search keyword: {keyword}");
             jobSearch.EnterKeyword(keyword);
-
-            Logger.Info("Selecting all locations and remote options.");
             jobSearch.SelectAllLocations();
             jobSearch.SelectRemote();
-
-            Logger.Info("Clicking Find button.");
             jobSearch.ClickFind();
-
+            
             Logger.Info("Waiting for search results to load.");
             Thread.Sleep(3000);
 

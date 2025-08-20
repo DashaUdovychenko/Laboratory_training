@@ -1,3 +1,4 @@
+using EpamTests.Core.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
@@ -18,6 +19,7 @@ public class CareersPage
 
     public void ClickDreamJobLink()
     {
+        Logger.Info("Clicking the 'Find Your Dream Job' link.");
         wait.Until(d => driver.FindElement(dreamJobLinkBy).Displayed && driver.FindElement(dreamJobLinkBy).Enabled);
         driver.FindElement(dreamJobLinkBy).Click();
     }

@@ -1,3 +1,4 @@
+using EpamTests.Core.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
@@ -21,18 +22,21 @@ public class AboutPage
 
     public void GoToAbout()
     {
+        Logger.Info("Navigating to the About page.");
         wait.Until(d => driver.FindElement(aboutMenu).Displayed && driver.FindElement(aboutMenu).Enabled);
         driver.FindElement(aboutMenu).Click();
     }
 
     public void ScrollToGlanceSection()
     {
+        Logger.Info("Scrolling to the 'EPAM at a Glance' section.");
         Actions actions = new Actions(driver);
         actions.MoveToElement(epamAtGlanceSection).Perform();
     }
 
     public void ClickDownload()
     {
+        Logger.Info("Clicking the 'Download Brochure' button.");
         wait.Until(d => driver.FindElement(downloadBrochureBtn).Displayed && driver.FindElement(downloadBrochureBtn).Enabled);
         driver.FindElement(downloadBrochureBtn).Click();
     }

@@ -13,7 +13,7 @@ C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutoma
 C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Core\obj\Debug\net9.0\refint\ApiAutomation.Core.dll
 C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.pdb
 C:\Users\dariy\OneDrive\Рабочий стол\[Module 09]   API Test\ApiAutomation.Core\obj\Debug\net9.0\ref\ApiAutomation.Core.dll
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\bin\Debug\net9.0\ApiAutomation.Core.deps.json
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\bin\Debug\net9.0\ApiAutomation.Core.deps.json
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\bin\Debug\net9.0\ApiAutomation.Core.dll
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\bin\Debug\net9.0\ApiAutomation.Core.pdb
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\bin\Debug\net9.0\ApiAutomation.Business.dll
@@ -24,8 +24,8 @@ C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\Ap
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.AssemblyInfo.cs
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.csproj.CoreCompileInputs.cache
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.sourcelink.json
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutom.65674179.Up2Date
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutom.65674179.Up2Date
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.dll
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\refint\ApiAutomation.Core.dll
 C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ApiAutomation.Core.pdb
-c:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ref\ApiAutomation.Core.dll
+C:\Users\dariy\OneDrive\Рабочий стол\CI_CD\Laboratory_training\api\ApiAutomation.Core\obj\Debug\net9.0\ref\ApiAutomation.Core.dll

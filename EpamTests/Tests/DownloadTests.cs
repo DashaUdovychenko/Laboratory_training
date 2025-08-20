@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using EpamTests.Core.Base;
+using EpamTests.Core.Helpers;
 using EpamTests.Bussines.Pages;
 using EpamTests.Core.Logging;
 using EpamTests.Core.Driver;
@@ -42,45 +43,19 @@ public class DownloadTests : BaseTest
     [TestCase("EPAM_Corporate_Overview_Q4FY-2024.pdf")]
     public void ValidateFileDownload(string fileName)
     {
+        Logger.Info("Test started: Validate file download from About page.");
+        
         try
         {
-            Logger.Info("Creating page objects");
             HomePage home = new HomePage(Driver);
             AboutPage about = new AboutPage(Driver);
 
-            Logger.Info("Navigating to Home page.");
             home.GoTo();
-
-            Logger.Info("Navigating to About page.");
             about.GoToAbout();
-
-            Logger.Debug("Scrolling to 'EPAM at a Glance' section.");
             about.ScrollToGlanceSection();
-
-            Logger.Info("Clicking 'Download' button.");
             about.ClickDownload();
 
-            string fullPath = Path.Combine(downloadDir, fileName);
-            int waitTime = 0;
-
-            Logger.Info($"Waiting for file to download: {fileName}");
-            while (!File.Exists(fullPath) && waitTime < 20)
-            {
-                Thread.Sleep(1000);
-                waitTime++;
-                Logger.Debug($"Download wait time elapsed: {waitTime}s");
-            }
-
-            bool fileDownloaded = File.Exists(fullPath);
-
-            if (fileDownloaded)
-            {
-                Logger.Info($"File downloaded successfully: {fileName}");
-            }
-            else
-            {
-                Logger.Error($"File was not downloaded within timeout: {fileName}");
-            }
+            bool fileDownloaded = FileHelper.WaitForFileDownload(downloadDir, fileName);
 
             Assert.That(fileDownloaded, Is.True, $"File '{fileName}' was not downloaded successfully.");
             Logger.Info("Test passed.");

@@ -15,10 +15,12 @@ public static class BrowserOptionsFactory
     {
         ChromeOptions options = new ChromeOptions();
         options.AddArgument("--start-maximized");
+        options.AddArgument("--no-sandbox");
+        options.AddArgument("--disable-dev-shm-usage");
 
         if (headless)
         {
-            options.AddArgument("--headless=new");
+            options.AddArgument("--headless");
             options.AddArgument("--disable-gpu");
             options.AddArgument("--window-size=1920,1080");
         }
@@ -50,6 +52,8 @@ public static class BrowserOptionsFactory
     {
         EdgeOptions options = new EdgeOptions();
         options.AddArgument("--start-maximized");
+        options.AddArgument("--no-sandbox");
+        options.AddArgument("--disable-dev-shm-usage");
 
         if (headless)
         {

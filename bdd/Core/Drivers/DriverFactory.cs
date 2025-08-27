@@ -13,6 +13,9 @@ namespace BDD.Core.Drivers
             new DriverManager().SetUpDriver(new ChromeConfig());
 
             ChromeOptions options = new ChromeOptions();
+            options.AddArgument("--no-sandbox");
+            options.AddArgument("--disable-dev-shm-usage");
+            options.AddArgument("--headless");
 
             ChromeDriver driver = new ChromeDriver(options);
 

@@ -1,6 +1,6 @@
 {
-  "Browser": "edge",
-  "Headless": false,
+  "Browser": "chrome",
+  "Headless": true,
   "BaseUrl": "https://www.epam.com/?_gl=1*1lcowp0*_ga*ODU2ODQ2MzY0LjE3MjgxOTMxMTk.*_ga_WBGDS7S6W6*MTc0MTkwMjAxOS4xMS4xLjE3NDE5MDQwNTMuNjAuMC4w",
   "LogLevel": "Info",
   "DownloadDirectory": "C:\\Users\\dariy\\Downloads"

@@ -46,9 +46,7 @@ jobs:
           dotnet-version: "9.0.x"
 
       - name: Run API tests
-        run: dotnet test api/ApiAutomation.Tests/ApiAutomation.Tests.csproj \
-              --logger "trx;LogFileName=api-tests.trx" \
-              --results-directory ./TestResults
+        run: dotnet test api/ApiAutomation.Tests/ApiAutomation.Tests.csproj --logger "trx;LogFileName=api-tests.trx" --results-directory ./TestResults
 
       - name: Publish API test results
         uses: actions/upload-artifact@v4
@@ -70,23 +68,15 @@ jobs:
           dotnet-version: "8.0.x"
 
       - name: Run UI tests (EpamTests)
-        run: |
-          dotnet test EpamTests/EpamTests.csproj \
-            --logger "trx;LogFileName=epam-tests.trx" \
-            --results-directory ./TestResults \
-            -- TestRunParameters.Parameter(name="Browser", value="${{ github.event.inputs.browser }}")
-
+        run: dotnet test EpamTests/EpamTests.csproj --logger "trx;LogFileName=epam-tests.trx" --results-directory ./TestResults -- TestRunParameters.Parameter:name=Browser,value=${{ github.event.inputs.browser }}
+            
       - name: Setup .NET 9 for BDD
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "9.0.x"
 
       - name: Run BDD tests
-        run: |
-          dotnet test bdd/Bdd.csproj \
-            --logger "trx;LogFileName=bdd-tests.trx" \
-            --results-directory ./TestResults \
-            -- TestRunParameters.Parameter(name="Browser", value="${{ github.event.inputs.browser }}")
+        run: dotnet test bdd/Bdd.csproj --logger "trx;LogFileName=bdd-tests.trx" --results-directory ./TestResults -- TestRunParameters.Parameter:name=Browser,value=${{ github.event.inputs.browser }}
 
       - name: Publish UI test results
         uses: actions/upload-artifact@v4
@@ -98,6 +88,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: screenshots
-          path: |
-            EpamTests/Logging/TestResults
-            EpamTests/TestResults
+          path: EpamTests/Logging/TestResults

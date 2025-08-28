@@ -1,6 +1,9 @@
 name: Laboratory Training CI
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
@@ -69,7 +72,7 @@ jobs:
 
       - name: Run UI tests (EpamTests)
         run: dotnet test EpamTests/EpamTests.csproj --logger "trx;LogFileName=epam-tests.trx" --results-directory ./TestResults -- 'TestRunParameters.Parameter(name="Browser", value="${{ github.event.inputs.browser }}")'
-        
+
   bdd-tests:
     runs-on: windows-latest
     needs: build

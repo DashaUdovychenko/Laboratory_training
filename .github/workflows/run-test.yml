@@ -76,8 +76,7 @@ jobs:
 
       - name: Run UI tests (EpamTests)
         shell: pwsh
-        run: 'dotnet test EpamTests/EpamTests.csproj --logger "trx;LogFileName=epam-tests.trx" --results-directory ./TestResults -- TestRunParameters.Parameter(name=\"Browser\", value=\"${{ env.BROWSER }}\")'
-
+        run: dotnet test EpamTests/EpamTests.csproj --logger "trx;LogFileName=epam-tests.trx" --results-directory ./TestResults -- 'TestRunParameters.Parameter(name="Browser", value="${{ env.BROWSER }}")'
   bdd-tests:
     runs-on: windows-latest
     needs: build

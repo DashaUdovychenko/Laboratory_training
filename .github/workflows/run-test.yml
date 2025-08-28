@@ -75,7 +75,7 @@ jobs:
           dotnet-version: "8.0.x"
 
       - name: Run UI tests (EpamTests)
-        run: dotnet test EpamTests/EpamTests.csproj --logger "trx;LogFileName=epam-tests.trx" --results-directory ./TestResults -- 'TestRunParameters.Parameter(name=\"Browser\", value=\"${{ env.BROWSER }}\")'
+        run: dotnet test EpamTests/EpamTests.csproj --logger "trx;LogFileName=epam-tests.trx" --results-directory ./TestResults -- TestRunParameters.Parameter(name=Browser, value=${{ env.BROWSER }})
 
   bdd-tests:
     runs-on: windows-latest
@@ -91,7 +91,7 @@ jobs:
           dotnet-version: "9.0.x"
 
       - name: Run BDD tests
-        run: dotnet test bdd/Bdd.csproj --logger "trx;LogFileName=bdd-tests.trx" --results-directory ./TestResults -- TestRunParameters.Parameter(name=\"Browser\", value=\"${{ env.BROWSER }}\")
+        run: dotnet test bdd/Bdd.csproj --logger "trx;LogFileName=bdd-tests.trx" --results-directory ./TestResults -- TestRunParameters.Parameter(name=Browser, value=${{ env.BROWSER }})
 
       - name: Publish UI test results
         uses: actions/upload-artifact@v4

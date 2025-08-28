@@ -93,7 +93,7 @@ jobs:
 
       - name: Run BDD tests
         shell: pwsh
-        run: 'dotnet test EpamTests/EpamTests.csproj --logger "trx;LogFileName=epam-tests.trx" --results-directory ./TestResults -- TestRunParameters.Parameter(name=\"Browser\", value=\"${{ env.BROWSER }}\")'
+        run: dotnet test EpamTests/EpamTests.csproj --logger "trx;LogFileName=epam-tests.trx" --results-directory ./TestResults -- \"TestRunParameters.Parameter(name=\\\"Browser\\\", value=\\\"${{ env.BROWSER }}\\\")\"
 
       - name: Publish UI test results
         uses: actions/upload-artifact@v4
@@ -105,4 +105,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: screenshots
-          path: EpamTests/Logging/TestResults
+          path: "EpamTests/Logging/TestResults"

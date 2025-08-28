@@ -54,7 +54,7 @@ jobs:
           name: api-test-results
           path: ./TestResults
 
-  ui-tests:
+  epam-ui-tests:
     runs-on: windows-latest
     needs: build
     if: always() # runs even if previous jobs fail
@@ -69,7 +69,15 @@ jobs:
 
       - name: Run UI tests (EpamTests)
         run: dotnet test EpamTests/EpamTests.csproj --logger "trx;LogFileName=epam-tests.trx" --results-directory ./TestResults -- 'TestRunParameters.Parameter(name="Browser", value="${{ github.event.inputs.browser }}")'
-            
+        
+  bdd-tests:
+    runs-on: windows-latest
+    needs: build
+    if: always() # runs even if previous jobs fail
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Setup .NET 9 for BDD
         uses: actions/setup-dotnet@v4
         with:

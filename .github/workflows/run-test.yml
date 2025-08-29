@@ -98,12 +98,14 @@ jobs:
           Copy-Item -Path ./TestResults/*.trx -Destination ./allure-results
 
       - name: Publish UI test results
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: epam-ui-tests-results
           path: ./TestResults
 
       - name: Publish Allure results
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-results-epam-ui
@@ -133,12 +135,14 @@ jobs:
           Copy-Item -Path ./TestResults/*.trx -Destination ./allure-results
 
       - name: Publish BDD test results
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: bdd-ui-tests-results
           path: ./TestResults
 
       - name: Publish Allure results
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-results-bdd

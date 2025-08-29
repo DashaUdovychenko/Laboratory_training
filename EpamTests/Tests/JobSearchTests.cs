@@ -6,15 +6,20 @@ using EpamTests.Core.Logging;
 using System.Threading;
 using EpamTests.Core.Driver;
 using OpenQA.Selenium;
+using Allure.NUnit.Attributes;
+using Allure.Commons;
 
 namespace EpamTests.Tests;
 
 [TestFixture]
+[AllureSuite("Job Search Tests")]
+[AllureSubSuite("Validate Job Search Results")]
 public class JobSearchTests : BaseTest
 {
     [Test]
     [TestCase(".NET")]
     [TestCase("Java")]
+    [AllureName("Validate job search results for keyword")]
     public void ValidateJobSearch(string keyword)
     {
         Logger.Info($"Test started: Validate job search results for keyword '{keyword}'.");
@@ -34,7 +39,7 @@ public class JobSearchTests : BaseTest
             jobSearch.SelectAllLocations();
             jobSearch.SelectRemote();
             jobSearch.ClickFind();
-            
+
             Logger.Info("Waiting for search results to load.");
             Thread.Sleep(3000);
 
@@ -43,12 +48,12 @@ public class JobSearchTests : BaseTest
 
             Assert.That(latestTitle.Contains(keyword, StringComparison.OrdinalIgnoreCase),
                 $"Expected job title to contain '{keyword}', but got: {latestTitle}");
-    
+
             Logger.Info("Test passed.");
         }
         catch (AssertionException ex)
         {
-            Logger.Error ($"Test failed with exception: {ex.Message}");
+            Logger.Error($"Test failed with exception: {ex.Message}");
             throw;
         }
     }

@@ -3,10 +3,14 @@ using BDD.Core.Helpers;
 using OpenQA.Selenium;
 using Reqnroll;
 using NUnit.Framework;
+using Allure.NUnit.Attributes;
+using Allure.Commons;
 
 namespace BDD.Tests.Steps
 {
     [Binding]
+    [AllureSuite("Services Module")]
+    [AllureSubSuite("Service Page Validations")]
     public class ServicesSteps
     {
         private readonly IWebDriver driver;
@@ -33,6 +37,7 @@ namespace BDD.Tests.Steps
         }
 
         [Then(@"the page title should contain ""(.*)""")]
+        [AllureName("Verify page title contains expected text")]
         public void ThenThePageTitleShouldContain(string expectedTitle)
         {
             string actualTitle = servicesPage!.GetTitle();
@@ -40,6 +45,7 @@ namespace BDD.Tests.Steps
         }
 
         [Then(@"the 'Our Related Expertise' section should be visible")]
+        [AllureName("Verify 'Our Related Expertise' section is visible")]
         public void ThenTheOurRelatedExpertiseSectionShouldBeVisible()
         {
             servicesPage!.ScrollToRelatedExpertiseSection();

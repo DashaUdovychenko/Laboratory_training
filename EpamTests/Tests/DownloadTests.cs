@@ -5,10 +5,14 @@ using EpamTests.Bussines.Pages;
 using EpamTests.Core.Logging;
 using EpamTests.Core.Driver;
 using OpenQA.Selenium;
+using Allure.NUnit.Attributes;
+using Allure.Commons;
 
 namespace EpamTests.Tests;
 
 [TestFixture]
+[AllureSuite("Download Tests")]
+[AllureSubSuite("Validate File Download")]
 public class DownloadTests : BaseTest
 {
     private string downloadDir = null!;
@@ -41,10 +45,11 @@ public class DownloadTests : BaseTest
 
     [Test]
     [TestCase("EPAM_Corporate_Overview_Q4FY-2024.pdf")]
+    [AllureName("Validate file download from About page")]
     public void ValidateFileDownload(string fileName)
     {
         Logger.Info("Test started: Validate file download from About page.");
-        
+
         try
         {
             HomePage home = new HomePage(Driver);

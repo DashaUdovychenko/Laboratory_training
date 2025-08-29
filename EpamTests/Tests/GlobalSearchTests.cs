@@ -4,16 +4,21 @@ using EpamTests.Bussines.Pages;
 using EpamTests.Core.Base;
 using EpamTests.Core.Driver;
 using EpamTests.Core.Logging;
+using Allure.NUnit.Attributes;
+using Allure.Commons;
 
 namespace EpamTests.Tests;
 
 [TestFixture]
+[AllureSuite("Global Search Tests")]
+[AllureSubSuite("Validate Search Results")]
 public class GlobalSearchTests : BaseTest
 {
     [Test]
     [TestCase("BLOCKCHAIN")]
     [TestCase("Cloud")]
     [TestCase("Automation")]
+    [AllureName("Validate global search results for keyword")]
     public void ValidateSearchResults(string keyword)
     {
         Logger.Info($"Test started: Validate search results for keyword '{keyword}'.");
@@ -29,8 +34,8 @@ public class GlobalSearchTests : BaseTest
             homePage.ClickFind();
 
             Assert.That(searchResultsPage.AnyGlobalResultsExist(), Is.True, "No search results were found.");
-            Assert.That(searchResultsPage.AllGlobalResultsContain(keyword),Is.True, $"Not all search results contain the keyword '{keyword}'.");
-    
+            Assert.That(searchResultsPage.AllGlobalResultsContain(keyword), Is.True, $"Not all search results contain the keyword '{keyword}'.");
+
             Logger.Info("Test passed.");
         }
         catch (AssertionException ex)

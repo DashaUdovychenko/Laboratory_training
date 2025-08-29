@@ -53,13 +53,24 @@ jobs:
           dotnet-version: "9.0.x"
 
       - name: Run API tests
-        run: dotnet test api/ApiAutomation.Tests/ApiAutomation.Tests.csproj --logger "trx;LogFileName=api-tests.trx" --results-directory ./TestResults
+        run: |
+          dotnet test api/ApiAutomation.Tests/ApiAutomation.Tests.csproj `
+            --logger "trx;LogFileName=api-tests.trx" `
+            --results-directory ./TestResults
+          mkdir -Force ./allure-results
+          Copy-Item -Path ./TestResults/*.trx -Destination ./allure-results
 
       - name: Publish API test results
         uses: actions/upload-artifact@v4
         with:
           name: api-test-results
           path: ./TestResults
+
+      - name: Publish Allure results for API
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results-api
+          path: ./allure-results
 
   epam-ui-tests:
     runs-on: windows-latest
@@ -76,7 +87,27 @@ jobs:
 
       - name: Run UI tests (EpamTests)
         shell: pwsh
-        run: dotnet test EpamTests/EpamTests.csproj --logger "trx;LogFileName=epam-tests.trx" --results-directory ./TestResults -- 'TestRunParameters.Parameter(name="Browser", value="${{ env.BROWSER }}")'
+        run: |
+          dotnet test EpamTests/EpamTests.csproj `
+            --logger "trx;LogFileName=epam-tests.trx" `
+            --results-directory ./TestResults `
+            -- 'TestRunParameters.Parameter(name="Browser", value="${{ env.BROWSER }}")'
+          # Create folder for Allure results
+          mkdir -Force ./allure-results
+          # Copy results NUnit in folder Allure
+          Copy-Item -Path ./TestResults/*.trx -Destination ./allure-results
+
+      - name: Publish UI test results
+        uses: actions/upload-artifact@v4
+        with:
+          name: epam-ui-tests-results
+          path: ./TestResults
+
+      - name: Publish Allure results
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results-epam-ui
+          path: ./allure-results
         
   bdd-tests:
     runs-on: windows-latest
@@ -93,16 +124,22 @@ jobs:
 
       - name: Run BDD tests
         shell: pwsh
-        run: dotnet test EpamTests/EpamTests.csproj --logger "trx;LogFileName=epam-tests.trx" --results-directory ./TestResults -- 'TestRunParameters.Parameter(name="Browser", value="${{ env.BROWSER }}")'
+        run: |
+          dotnet test EpamTests/EpamTests.csproj `
+            --logger "trx;LogFileName=epam-bdd-tests.trx" `
+            --results-directory ./TestResults `
+            -- 'TestRunParameters.Parameter(name="Browser", value="${{ env.BROWSER }}")'
+          mkdir -Force ./allure-results
+          Copy-Item -Path ./TestResults/*.trx -Destination ./allure-results
 
-      - name: Publish UI test results
+      - name: Publish BDD test results
         uses: actions/upload-artifact@v4
         with:
-          name: epam-ui-tests-results
+          name: bdd-ui-tests-results
           path: ./TestResults
 
-      - name: Publish screenshots (if any)
+      - name: Publish Allure results
         uses: actions/upload-artifact@v4
         with:
-          name: screenshots
-          path: ./TestResults
+          name: allure-results-bdd
+          path: ./allure-results

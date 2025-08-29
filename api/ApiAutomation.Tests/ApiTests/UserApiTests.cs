@@ -8,12 +8,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Allure.NUnit.Attributes;
+using Allure.Commons;
 
 namespace ApiAutomation.Tests.ApiTests
 {
     [TestFixture]
     [Category("API")]
     [Parallelizable(ParallelScope.All)]
+    [AllureSuite("User API Tests")]
+    [AllureSubSuite("CRUD Operations")]
     public class UserApiTests
     {
         private UserApiClient _userApiClient = null!;
@@ -25,6 +29,7 @@ namespace ApiAutomation.Tests.ApiTests
         }
 
         [Test]
+        [AllureName("Get list of users")]
         public async Task ValidateListOfUsersCanBeReceived()
         {
             Logger.Info("Test: Validate list of users can be received");
@@ -49,6 +54,7 @@ namespace ApiAutomation.Tests.ApiTests
         }
 
         [Test]
+        [AllureName("Validate response headers")]
         public async Task ValidateResponseHeaderForListOfUsers()
         {
             Logger.Info("Test: Validate response header for list of users");
@@ -66,6 +72,7 @@ namespace ApiAutomation.Tests.ApiTests
         }
 
         [Test]
+        [AllureName("Validate response body content")]
         public async Task ValidateContentOfResponseBodyForListOfUsers()
         {
             Logger.Info("Test: Validate content of response body for list of users");
@@ -93,6 +100,7 @@ namespace ApiAutomation.Tests.ApiTests
         }
 
         [Test]
+        [AllureName("Create a new user")]
         public async Task ValidateUserCanBeCreated()
         {
             Logger.Info("Test: Validate user can be created");
@@ -110,6 +118,7 @@ namespace ApiAutomation.Tests.ApiTests
         }
 
         [Test]
+        [AllureName("Invalid user endpoint returns 404")]
         public async Task ValidateUserNotFound()
         {
             Logger.Info("Test: Validate user not found on invalid endpoint");

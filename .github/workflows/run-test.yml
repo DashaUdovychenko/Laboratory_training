@@ -105,4 +105,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: screenshots
-          path: "EpamTests/TestResults"
+          path: "EpamTests/Logging/TestResults"

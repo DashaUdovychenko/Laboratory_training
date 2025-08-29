@@ -77,6 +77,7 @@ jobs:
       - name: Run UI tests (EpamTests)
         shell: pwsh
         run: dotnet test EpamTests/EpamTests.csproj --logger "trx;LogFileName=epam-tests.trx" --results-directory ./TestResults -- 'TestRunParameters.Parameter(name="Browser", value="${{ env.BROWSER }}")'
+        
   bdd-tests:
     runs-on: windows-latest
     needs: build
@@ -97,7 +98,7 @@ jobs:
       - name: Publish UI test results
         uses: actions/upload-artifact@v4
         with:
-          name: ui-test-results
+          name: epam-ui-tests-results
           path: ./TestResults
 
       - name: Publish screenshots (if any)

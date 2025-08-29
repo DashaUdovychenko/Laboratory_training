@@ -35,8 +35,7 @@ public abstract class BaseTest
         TestStatus status = TestContext.CurrentContext.Result.Outcome.Status;
 
         string safeTestName = System.Text.RegularExpressions.Regex
-                    .Replace(TestContext.CurrentContext.Test.Name, @"[\\/:*?""<>|()]", "_")
-                    .Replace(" ", "_");
+                    .Replace(TestContext.CurrentContext.Test.Name, @"[^a-zA-Z0-9_]", "_");
 
         if (status == TestStatus.Failed)
         {

@@ -18,8 +18,6 @@ on:
           - chrome
           - firefox
           - edge
-  schedule:
-    - cron: "0 9 * * *"
 
 env:
   # Either a manually selected browser or the default chrome is used
